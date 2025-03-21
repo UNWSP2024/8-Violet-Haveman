@@ -7,19 +7,22 @@
 
 # Start your changes on line 13
 
+
 def word_separator(sentence):
 
     new_sentence = ""
-    #    Add your logic here
+    # Add your logic here
+    if sentence.isupper():
+        sentence = sentence.lower
+        new_sentence = sentence + " "
     new_sentence = new_sentence + sentence[0]
     for s in range(1, len(sentence)):
-        proper = sentence[1]
-        if proper.isupper():
-            proper = proper.lower()
-            new_sentence = new_sentence + " "
-    new_sentence = new_sentence + proper
+        print(sentence[s])
 
     return new_sentence.strip()
+
+
+
 
 # Example usage
 
