@@ -11,6 +11,13 @@ def word_separator(sentence):
 
     new_sentence = ""
     #    Add your logic here
+    new_sentence = new_sentence + sentence[0]
+    for s in range(1, len(sentence)):
+        proper = sentence[1]
+        if proper.isupper():
+            proper = proper.lower()
+            new_sentence = new_sentence + " "
+    new_sentence = new_sentence + proper
 
     return new_sentence.strip()
 
