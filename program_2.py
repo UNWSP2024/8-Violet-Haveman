@@ -6,19 +6,16 @@
 # For example the string "StopAndSmellTheRoses" would be converted to "Stop and smell the roses."
 
 # Start your changes on line 13
-
-
 def word_separator(sentence):
 
     new_sentence = ""
     # Add your logic here
-    if sentence.isupper():
-        sentence = sentence.lower
-        new_sentence = sentence + " "
-    new_sentence = new_sentence + sentence[0]
     for s in range(1, len(sentence)):
         print(sentence[s])
-
+        # check if value at sentence[s] is uppercase
+        # if it is uppercase append a space and its value to the new_sentence
+        if sentence.isupper():
+            new_sentence = new_sentence + " "
     return new_sentence.strip()
 
 
