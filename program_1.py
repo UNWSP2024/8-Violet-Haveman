@@ -5,15 +5,19 @@
 
 # Add your logic starting on line 11
 
-def initials_generator(personsName):
+def initials_generator(name1, name2, name3):
 
-    personsInitials = ""
     #    Add your logic here
-
+    initial1 = name1[0]
+    initial2 = name2[0]
+    initial3 = name3[0]
+    personsInitials = initial1 +"." + " " + initial2 + "." + " " + initial3 + "."
     return personsInitials.strip()
+name1 = input("What is your first name? ")
+name2 = input("What is your middle name? ")
+name3 = input("What is your last name? ")
+personsName = name1 + " " + name2 + " " + name3
 
-personsName = input('Enter the users first, middle, and last name')
-
-initials = initials_generator(personsName)
+initials = initials_generator(name1, name2, name3)
 
 print(initials)
