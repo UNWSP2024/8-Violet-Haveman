@@ -15,8 +15,8 @@ def course_info():
         name = input("Enter a name for the Course ID you just entered: ")
         courses[ID] = name
     subject = input("Subject: ")
-    if subject in courses:
-        courses.get(subject)
-    return courses
+    for key in courses:
+        if key.startswith(subject):
+            print("found {} : {}".format(key, courses[key]))
 
 course_info()

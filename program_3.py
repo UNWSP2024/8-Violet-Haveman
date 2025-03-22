@@ -10,15 +10,17 @@ def state_quiz():
     correct = 0
     states = {"Alabama":"Montgomery", "Alaska":"Junaeu", "Arizona":"Pheonix", "Arkansas":"Little Rock", 'California':'Sacracmento', "Colorado":'Denver',"Conneticut":'Hartford', "Delaware":'Dover', 'Flordia':'Tallahasse', 'Georgia':'Atlanta', 'Hawaii':'Honolulu', 'Idado':'Boise', 'Illinois':'Springfield', 'Indiana':'Indianaplois', "Iowa":'Des Moines', 'Kansas':'Topeka', 'Kentucky':'Frankfort', 'Louisiana':'Baton Rouge', 'Maine':'Augusta', 'Maryland':'Annapolis','Massachusetts':'Boston', 'Michigan':'Lansing', 'Minnesota':'Saint Paul', 'Missisippi':'Jackson', 'Missouri':'Jefferson City', 'Montana':'Helena', 'Nebraska':'Lincoln','Nevada':'Carson City', 'New Hampshire':'Concord', 'New Jersey':'Trenton', 'New Mexico':'Santa Fe', 'New York':'Albany', 'North Carolina':'Raleigh', 'North Dakota':'Bismarck', 'Ohio':'Columbus', 'Oklahoma':'Oklahoma City', 'Oregon':'Salem', 'Pennsylavnia':'Harrisburg', 'Rhode Island':'Providence', "South Carolina":'Columbia', 'South Dakota':'Pierre', 'Tennessee':'Nashville', 'Texas':'Austin', "Utah":'Salt Lake City', 'Vermont':'Montepelier', 'Virginia':'Richmond', 'Washington':'Olympia', "West Virginia":'Charleston', 'Wisconsin':'Madison', 'Wyoming':'Cheyenne'}
     import random
-    state = random.choice(list(states))
-    print(state)
-    answer = input("What is the capital of the state provided? ")
-    if answer in states:
-        correct = correct + 1
-    else:
-        print ("Your answer is incorrect, try again")
-    if correct == 50:
-        return correct
+    while correct <= 50:
+        state = random.choice(list(states))
+        print(state)
+        correct_answer = states.get(state)
+        user_answer = input("What is the capital of the state provided? ")
+        if user_answer == correct_answer:
+            correct += correct + 1
+            print("Correct!")
+        else:
+            print ("Your answer is incorrect, try again")
+    print("Quiz Complete")
 
 state_quiz()
 
