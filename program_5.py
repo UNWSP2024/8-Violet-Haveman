@@ -4,6 +4,8 @@
 # Then ask the user for a subject (like "COS"). 
 # Finally, the program will display the ID and name of all the courses having that subject.
 
+
+
 def course_info():
     courses = {}
     while True:
@@ -18,4 +20,3 @@ def course_info():
     return courses
 
 course_info()
-
